@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tecno Spark Gallery</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: #f1c40f;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0 15px 30px;
+    }
+
+    .container {
+      position: relative;
+    }
+
+    .back-btn {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+    }
+
+    .back-btn a {
+      text-decoration: none;
+      background: #333;
+      color: #f1c40f;
+      padding: 6px 15px;
+      border-radius: 6px;
+      font-weight: 600;
+      box-shadow: 0 0 6px #f1c40f;
+      transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+      display: inline-block;
+    }
+
+    .back-btn a:hover {
+      background: #d4ac0d;
+      color: #121212;
+      box-shadow: 0 0 12px #d4ac0d;
+    }
+
+    h2 {
+      text-align: center;
+      background-color: #2b2b2b;
+      color: antiquewhite;
+      margin: 60px 0 25px;
+      padding: 12px 0;
+      border-radius: 8px;
+      box-shadow: 0 0 15px #f1c40f88;
+      user-select: none;
+    }
+
+    .thumbnail-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 30px;
+    }
+
+    .thumbnail {
+      position: relative;
+      overflow: hidden;
+      border-radius: 6px;
+      cursor: pointer;
+      box-shadow: 0 0 6px #f1c40f88;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background-color: #222;
+    }
+
+    .thumbnail img {
+      width: 150px;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+      border-radius: 6px;
+    }
+
+    .thumbnail:hover {
+      transform: scale(1.15);
+      box-shadow: 0 0 16px #f1c40fcc;
+      z-index: 10;
+    }
+
+    .description {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(33, 33, 33, 0.85);
+      color: #f1c40f;
+      text-align: center;
+      font-size: 8px;
+      padding: 3px 4px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 6px;
+      user-select: none;
+    }
+
+    .thumbnail:hover .description {
+      opacity: 1;
+    }
+
+    @media (max-width: 768px) {
+      .thumbnail img {
+        width: 100px;
+        height: 130px;
+      }
+
+      .description {
+        font-size: 7px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="back-btn">
+      <a href="index.php">←</a>
+    </div>
+  </div>
+
+  <h2>Tecno Spark</h2>
+
+  <!-- Row 1 -->
+  <div class="thumbnail-gallery">
+    <a href="22.html">
+      <div class="thumbnail">
+        <img src="22.png" alt="Tecno Spark 10" />
+        <div class="description">Tecno Spark 10</div>
+      </div>
+    </a>
+    <a href="23.html">
+      <div class="thumbnail">
+        <img src="23.png" alt="Tecno Spark 20" />
+        <div class="description">Tecno Spark 20</div>
+      </div>
+    </a>
+    <a href="24.html">
+      <div class="thumbnail">
+        <img src="24.png" alt="Tecno Spark Go 2024" />
+        <div class="description">Tecno Spark Go 2024</div>
+      </div>
+    </a>
+    <a href="25.html">
+      <div class="thumbnail">
+        <img src="25.png" alt="Tecno Spark 8C" />
+        <div class="description">Tecno Spark 8C</div>
+      </div>
+    </a>
+    <a href="26.html">
+      <div class="thumbnail">
+        <img src="26.png" alt="Tecno Spark 6 Air" />
+        <div class="description">Tecno Spark 6 Air</div>
+      </div>
+    </a>
+  </div>
+
+  <!-- Row 2 -->
+  <div class="thumbnail-gallery">
+    <a href="27.html">
+      <div class="thumbnail">
+        <img src="27.png" alt="Tecno Spark 9 Pro" />
+        <div class="description">Tecno Spark 9 Pro</div>
+      </div>
+    </a>
+    <a href="28.html">
+      <div class="thumbnail">
+        <img src="28.png" alt="Tecno Spark Go 2023" />
+        <div class="description">Tecno Spark Go 2023</div>
+      </div>
+    </a>
+    <a href="29.html">
+      <div class="thumbnail">
+        <img src="29.png" alt="Tecno Spark 7T" />
+        <div class="description">Tecno Spark 7T</div>
+      </div>
+    </a>
+    <a href="30.html">
+      <div class="thumbnail">
+        <img src="30.png" alt="Tecno Spark 8" />
+        <div class="description">Tecno Spark 8</div>
+      </div>
+    </a>
+    <a href="11.html">
+      <div class="thumbnail">
+        <img src="11.png" alt="Tecno Spark 10 Pro" />
+        <div class="description">Tecno Spark 10 Pro</div>
+      </div>
+    </a>
+  </div>
+
+</body>
+</html>

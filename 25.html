@@ -1,0 +1,155 @@
+<html>
+<head>
+<style>.body {
+    background-color:  #2b2b2b;color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.container {
+	display: flex;
+	justify-content: center;
+	width: 35em;
+	background:#555555;
+	box-shadow: 5px 5px 15px black;
+	border-radius: 10px;
+	padding: 20px;
+	max-width: 600px;
+	margin: auto;
+}
+p {
+	font-size: 0.6em;
+	color: rgba(190,147,147,1.00);
+	letter-spacing: 1px;
+}
+    .images {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: auto;
+        }
+        .imahe {
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            margin-right: 20px;
+        }
+        .slideshow-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .slideshow-buttons span {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background:rgba(241,241,241,1.00);
+        }
+        .pick{
+            text-transform:uppercase;
+            font-size: 10px;
+        }
+        .sizes{
+            display: flex;
+            justify-content: flex-start;
+            column-gap:10px;
+            flex-wrap: wrap;
+            font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+        }
+        .size{
+            border: none;
+            width: 50px;
+            height: 24px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            padding: 2px;
+            font-size: 15px;
+            transition: 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+        .size:hover{
+            background:#2b2b2b;
+            color: white;
+            transform: scale(1.1)
+        }
+        .product{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-right: 20px;
+        }
+        #p{
+            text-transform: uppercase;
+        }
+        .par2{
+            color: black;
+            font-size: 15px;
+        }
+        .description {
+            text-transform: none;
+            font-size: x-large;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            
+            margin-bottom: 17px;
+            color: white;
+            font-size: 0.7em;
+            line-height: 1.6em;
+            text-align: justify;
+        }
+        .buttons{
+            padding: 1px;
+            display: flex;
+            outline: 0;
+            border: 0;
+            border-radius: 2px;
+            letter-spacing: 1px;
+            color: white;
+            cursor: pointer;
+        }
+        .buttons:hover{
+            transition: all 0.4s ease-in-out;
+        }
+        .add{
+            width: 150px;
+            font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+            text-transform: uppercase;
+        }
+        .back{
+            width: 50px;
+            font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+            text-transform: uppercase;
+        }
+        </style>
+</head>
+<body class="body">
+<div class="container">
+<div class="images">
+<img alt="" src="25.png" class="imahe">
+	<div class="slideshow-buttons">
+		<span></span>
+        <span></span>
+		<span></span>
+		<span></span>
+</div>
+<p class="pick">Choose variant</p>
+<div class="sizes">
+	<span class="size">6/128</span>
+	<span class="size">8/128</span>
+	<span class="size">8/256</span>
+	<span class="size">12/256</span>
+	<span class="size">12/512</span>
+	</div>
+	</div>
+    <div class="product">
+		<h3>Gaming phone</h3>
+		<h3>Tecno Spark go 1</h3>
+		<h3>PHP 3,499</h3>
+		<p class="description">A gaming phone that will suites your gaming needs.</p>
+		<div class="buttons">
+		<button class="add">Add to Cart</button>
+		<a href="lab7.html"><button class="back">Back</button></a>
+				</div>
+			</div>
+	</div>
+</body>
+</html>

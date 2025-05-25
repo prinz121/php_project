@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tecno Pova Gallery</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: #f1c40f;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0 15px 30px;
+    }
+
+    .container {
+      position: relative;
+    }
+
+    .back-btn {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+    }
+
+    .back-btn a {
+      text-decoration: none;
+      background: #333;
+      color: #f1c40f;
+      padding: 6px 15px;
+      border-radius: 6px;
+      font-weight: 600;
+      box-shadow: 0 0 6px #f1c40f;
+      transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+      display: inline-block;
+    }
+
+    .back-btn a:hover {
+      background: #d4ac0d;
+      color: #121212;
+      box-shadow: 0 0 12px #d4ac0d;
+    }
+
+    h2 {
+      text-align: center;
+      background-color: #1e1e1e;
+      color: #f1c40f;
+      margin: 60px 0 25px;
+      padding: 12px 0;
+      border-radius: 8px;
+      box-shadow: 0 0 15px #f1c40f88;
+      user-select: none;
+    }
+
+    .thumbnail-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    .thumbnail {
+      position: relative;
+      overflow: hidden;
+      width: 150px;
+      height: 200px;
+      border-radius: 6px;
+      cursor: pointer;
+      box-shadow: 0 0 6px #f1c40f88;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background-color: #222;
+    }
+
+    .thumbnail img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 6px;
+    }
+
+    .thumbnail:hover {
+      transform: scale(1.15);
+      box-shadow: 0 0 16px #f1c40fcc;
+      z-index: 10;
+    }
+
+    .description {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(33, 33, 33, 0.85);
+      color: #f1c40f;
+      text-align: center;
+      font-style: normal;
+      font-size: 8px;
+      padding: 3px 4px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 6px;
+      user-select: none;
+    }
+
+    .thumbnail:hover .description {
+      opacity: 1;
+    }
+
+    @media (max-width: 768px) {
+      .thumbnail {
+        width: 100px;
+        height: 130px;
+      }
+
+      .description {
+        font-size: 7px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="back-btn">
+      <a href="index.php">←</a>
+    </div>
+  </div>
+
+  <h2>Tecno Pova</h2>
+
+  <!-- Thumbnail Gallery -->
+  <div class="thumbnail-gallery">
+    <a href="22.html">
+      <div class="thumbnail">
+        <img src="22.png" alt="Tecno Pova 6 pro 5G">
+        <div class="description">Tecno Pova 6 pro 5G</div>
+      </div>
+    </a>
+    <a href="1.html">
+      <div class="thumbnail">
+        <img src="1.png" alt="Tecno Pova 3">
+        <div class="description">Tecno Pova 3</div>
+      </div>
+    </a>
+    <a href="7.html">
+      <div class="thumbnail">
+        <img src="7.png" alt="Tecno Pova 5 X Free Fire">
+        <div class="description">Tecno Pova 5 X Free Fire</div>
+      </div>
+    </a>
+    <a href="11.html">
+      <div class="thumbnail">
+        <img src="11.png" alt="Tecno Pova Neo 3">
+        <div class="description">Tecno Pova Neo 3</div>
+      </div>
+    </a>
+    <a href="29.html">
+      <div class="thumbnail">
+        <img src="29.png" alt="Tecno Pova 4 Pro">
+        <div class="description">Tecno Pova 4 Pro</div>
+      </div>
+    </a>
+  </div>
+
+  <div class="thumbnail-gallery">
+    <a href="27.html">
+      <div class="thumbnail">
+        <img src="27.png" alt="Tecno Pova 30 Pro 5G">
+        <div class="description">Tecno Pova 30 Pro 5G</div>
+      </div>
+    </a>
+    <a href="28.html">
+      <div class="thumbnail">
+        <img src="28.png" alt="Tecno Pova 20 Doodle Edition">
+        <div class="description">Tecno Pova 20 Doodle Edition</div>
+      </div>
+    </a>
+    <a href="26.html">
+      <div class="thumbnail">
+        <img src="26.png" alt="Tecno Pova 30c">
+        <div class="description">Tecno Pova 30c</div>
+      </div>
+    </a>
+    <a href="30.html">
+      <div class="thumbnail">
+        <img src="30.png" alt="Tecno Pova 20c">
+        <div class="description">Tecno Pova 20c</div>
+      </div>
+    </a>
+    <a href="8.html">
+      <div class="thumbnail">
+        <img src="8.png" alt="Tecno Pova 20">
+        <div class="description">Tecno Pova 20</div>
+      </div>
+    </a>
+  </div>
+
+</body>
+</html>

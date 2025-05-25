@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Register & Login Modal</title>
+<style>
+  /* Basic styles from previous black & gold + modal styles */
+  body {
+    background-color: #121212;
+    color: #ffd700;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .container {
+    max-width: 500px;
+    margin: 40px auto;
+    background: #1e1e1e;
+    padding: 30px 40px;
+    border-radius: 10px;
+  }
+
+  label, input, button {
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  input, button {
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ffd700;
+    background-color: #2a2a2a;
+    color: white;
+    font-size: 1rem;
+  }
+
+  button {
+    background-color: #ffd700;
+    color: #121212;
+    border: none;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #e6be00;
+  }
+
+  /* Modal styles */
+  .modal {
+    display: none; /* hidden by default */
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  .modal-content {
+    background-color: #1e1e1e;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #ffd700;
+    width: 300px;
+    border-radius: 10px;
+    color: #ffd700;
+  }
+
+  .close-btn {
+    color: #ffd700;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .close-btn:hover {
+    color: #e6be00;
+  }
+
+  /* Link in modal */
+  .modal-content a {
+    color: #ffd700;
+    text-decoration: none;
+  }
+</style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Register</h1>
+    <form id="registerForm">
+      <label for="email">Email</label>
+      <input type="email" name="email" required placeholder="Enter Email" />
+
+      <label for="username">Username</label>
+      <input type="text" name="username" required placeholder="Enter Username" />
+
+      <label for="password">Password</label>
+      <input type="password" name="password" placeholder="Enter Password" />
+
+      <button type="submit">Save</button>
+    </form>
+  </div>
+
+  <!-- Login Modal -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" id="closeModal">&times;</span>
+      <h2>Login</h2>
+      <form id="loginForm">
+        <label for="loginUser">Username</label>
+        <input type="text" name="loginUser" required placeholder="Enter Username" />
+        <label for="loginPass">Password</label>
+        <input type="password" name="loginPass" required placeholder="Enter Password" />
+        <button type="submit">Log In</button>
+      </form>
+      <p>Don't have an account? <a href="#">Register</a></p>
+    </div>
+  </div>
+
+<script>
+  // Grab elements
+  const registerForm = document.getElementById('registerForm');
+  const loginModal = document.getElementById('loginModal');
+  const closeModalBtn = document.getElementById('closeModal');
+
+  // When Register form is submitted
+  registerForm.addEventListener('submit', function(event) {
+    event.preventDefault(); // prevent actual form submission
+
+    // You can do form validation or AJAX here if needed
+    // For now, just show the login modal
+    loginModal.style.display = 'block';
+
+    // Optionally clear the registration form
+    registerForm.reset();
+  });
+
+  // Close modal when clicking X button
+  closeModalBtn.addEventListener('click', () => {
+    loginModal.style.display = 'none';
+  });
+
+  // Close modal if click outside modal-content
+  window.addEventListener('click', function(event) {
+    if (event.target === loginModal) {
+      loginModal.style.display = 'none';
+    }
+  });
+</script>
+
+</body>
+</html>
